@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.awt.*;
+import java.io.File;
 
 import samples.Animal;
 import samples.Vehicle;
@@ -35,6 +36,8 @@ public class MyClass {
 			//v1.setColor("Red");
 			System.out.println(v1.getColor()+" "+v2.getColor());
 			*/
+			File ff1 = new File("C:\\helloka.txt");
+			if (!ff1.exists()) System.out.println("hehehe");
 			Animal a1 = new Animal("Robby");
 			Animal a2 = new Animal("Robby");
 			System.out.println(a1.equals(a2));
