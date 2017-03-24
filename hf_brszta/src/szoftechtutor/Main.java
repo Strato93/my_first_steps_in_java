@@ -13,6 +13,7 @@ import javax.swing.WindowConstants;
 
 
 
+
 /**
  *
  * @author Predi
@@ -29,6 +30,9 @@ public class Main {
 		 * ehhez tartozik még a GUI.java, a Control.java 
 		 * és a Network.java, de ez még nincs implementálva
 		 * 
+		 * 
+		*/
+		/*
 		Control c = new Control();
 		GUI g = new GUI(c);
 		c.setGUI(g);
