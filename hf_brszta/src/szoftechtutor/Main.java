@@ -5,8 +5,18 @@
 
 package szoftechtutor;
 
-import java.awt.Dimension;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.Timer;
 import javax.swing.WindowConstants;
@@ -19,6 +29,8 @@ import javax.swing.WindowConstants;
  * @author Predi
  */
 public class Main {
+	
+	public static Dimension d = new Dimension(1024,768); // Ablak fix méretének beállítása
 
 	/**
 	 * @param args
@@ -38,9 +50,6 @@ public class Main {
 		c.setGUI(g);
 		*/
 		
-		Dimension d = new Dimension(1024,768); // Ablak fix méretének beállítása
-
-		
 		JFrame window = new JFrame(); // Ablak létrehozása
 		window.setTitle("Faltoro"); // Ablak neve
 		window.setSize(d); // Ablak mérete
@@ -54,7 +63,7 @@ public class Main {
         window.add(faltoro); // hozzáadása az ablakhoz
         
         window.addMouseMotionListener(faltoro); // egér mûködtetése
-        
+        window.addMouseListener(faltoro);
         Timer timer = new Timer(4, faltoro); // ciklikus lefutás
         timer.start();
         
